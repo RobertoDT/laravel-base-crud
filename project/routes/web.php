@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', "BookController@index")->name("books.index");
+// Route::get('/', "BookController@index")->name("books.index");
+
+Route::resource("books", "BookController");
