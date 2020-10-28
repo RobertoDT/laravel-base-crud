@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
-use Illuminate\Http\Rule;
+use Illuminate\Validation\Rule;
 
 class BookController extends Controller
 {
@@ -143,7 +143,7 @@ class BookController extends Controller
         $book->genre = $data["genre"];
         $book->image = $data["image"];
 
-        $book->update($data);
+        $book->update();
 
         return redirect()->route('books.show', $book);
 
